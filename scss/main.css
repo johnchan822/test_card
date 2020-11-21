@@ -1,0 +1,409 @@
+/* http://meyerweb.com/eric/tools/css/reset/v2.0 | 20110126 License: none (public domain) */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: middle; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none; }
+
+/* ----------Initial Setting---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+  color: inherit; }
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Stdw5, sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden; }
+
+html {
+  font-size: 18px; }
+
+/*------- mixin --------*/
+.w1300 {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%; }
+
+/*-------- Start CSS --------*/
+#contentfield {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  #contentfield img {
+    width: 100%; }
+  #contentfield .s1, #contentfield .s2, #contentfield .s3, #contentfield .s4, #contentfield .s5, #contentfield .s6 {
+    position: relative; }
+  #contentfield .pc_only {
+    display: block; }
+  #contentfield .mobile_only {
+    display: none; }
+  #contentfield .headbar {
+    padding-left: 24px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    z-index: 2; }
+    #contentfield .headbar img {
+      width: 220px;
+      transition: transform 0.3s ease; }
+      #contentfield .headbar img:hover {
+        transform: scale(1.1); }
+  #contentfield .s1 .s1_car {
+    position: relative;
+    opacity: 0; }
+    #contentfield .s1 .s1_car.active {
+      animation: s1_car_move 1s forwards; }
+@keyframes s1_car_move {
+  0% {
+    opacity: 0;
+    transform: translate(50%, 5%) scale(0.9); }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 5%) scale(1); } }
+  #contentfield .s1 .s1_title {
+    width: 20%;
+    top: 2%;
+    left: 2%;
+    position: absolute; }
+  #contentfield .s1 .s1_b_title {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 70%; }
+  #contentfield .s1 .s1_item {
+    top: 20%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 40%; }
+  #contentfield .s1 .s1_item_2 {
+    top: 20%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 40%; }
+  #contentfield .s1 .s1_word {
+    top: 26%;
+    left: 67%;
+    position: absolute;
+    width: 20%; }
+  #contentfield .s1 .s1_robot {
+    top: 21%;
+    right: 2%;
+    width: 12%;
+    position: absolute; }
+  #contentfield .s1 .s1_cars {
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 90%; }
+  #contentfield .s1 .s1_gift_bg {
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 90%; }
+  #contentfield .s1 .s1_gift_txt {
+    top: 50%;
+    left: 66%;
+    position: absolute;
+    width: 25%; }
+  #contentfield .s1 .s1_gift_u_txt {
+    top: 64%;
+    left: 8%;
+    position: absolute;
+    width: 50%; }
+  #contentfield .s1 .s1_gift_car {
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 30%; }
+  #contentfield .s1 .s1_tv {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 90%; }
+  #contentfield .s1 iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  #contentfield .s1 .percentage {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: absolute;
+    top: 20%;
+    left: 10%; }
+  #contentfield .s2 {
+    margin-top: -6%; }
+    #contentfield .s2 .s2_title {
+      width: 32%;
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0; }
+      #contentfield .s2 .s2_title.active {
+        animation: s2_title_move 1s forwards; }
+@keyframes s2_title_move {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8); }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1); } }
+    #contentfield .s2 .s2_link {
+      width: 28%;
+      position: absolute;
+      top: 40%;
+      right: 11%;
+      transition: .3s; }
+      #contentfield .s2 .s2_link:hover {
+        transform: scale(1.05); }
+  #contentfield .s3 {
+    padding-bottom: 15%; }
+    #contentfield .s3 .s3_link {
+      width: 45%;
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: .3s; }
+      #contentfield .s3 .s3_link:hover {
+        transform: translateX(-50%) scale(1.05); }
+  #contentfield .s4 .s4_link {
+    width: 50%;
+    padding-bottom: 25px;
+    position: absolute;
+    right: 0%;
+    bottom: 9.5%; }
+  @media screen and (max-width: 768px) {
+    #contentfield .pc_only {
+      display: none; }
+    #contentfield .mobile_only {
+      display: block; }
+    #contentfield .headbar {
+      padding-left: 10px;
+      width: 100%;
+      height: 40px; }
+      #contentfield .headbar img {
+        width: 110px; }
+    #contentfield .s2 {
+      margin-top: 0; }
+      #contentfield .s2 .s2_title {
+        width: 80%;
+        top: 17%;
+        left: 50%; }
+      #contentfield .s2 .s2_link {
+        width: 60%;
+        top: 90%;
+        right: 50%;
+        transform: translateX(50%); }
+        #contentfield .s2 .s2_link:hover {
+          transform: translateX(50%) scale(1.05); }
+    #contentfield .s3 {
+      padding-bottom: 35%; }
+      #contentfield .s3 .s3_link {
+        width: 70%;
+        bottom: 3%;
+        left: 50%; }
+    #contentfield .s4 .s4_link {
+      padding-bottom: 8.7%;
+      bottom: 2.5%; } }
+
+.lightbox {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none; }
+  .lightbox.active {
+    display: block; }
+  .lightbox .cover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute; }
+  .lightbox .box {
+    width: 90%;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50vh;
+    transform: translateX(-50%) translateY(-50%); }
+    .lightbox .box img {
+      width: 100%; }
+    .lightbox .box .close {
+      width: 5%;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer; }
+    .lightbox .box .d_btn1 {
+      width: 33%;
+      position: absolute;
+      bottom: 12%;
+      left: 9%; }
+      .lightbox .box .d_btn1 img {
+        width: 100%; }
+    .lightbox .box .d_btn2 {
+      width: 33%;
+      position: absolute;
+      bottom: 12%;
+      left: 56%; }
+      .lightbox .box .d_btn2 img {
+        width: 100%; }
+
+/*# sourceMappingURL=main.css.map */
