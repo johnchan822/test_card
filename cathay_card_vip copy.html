@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./lib/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/main.css?ver=<?= time() ?>">
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/fullpage.js"></script>
+</head>
+
+<body>
+    <div id="s1_bg" class="postion section">
+        <div class="s1_section">
+            <section id="contentfield" class="w600">
+                <div class="s1">
+                    <img src="img/index/img_ball.png" alt="" class="s1_ball">
+                    <img src="img/index/bg_snow.png" alt="" class="s1_snow">
+                    <img src="img/index/one_snow.png" alt="" class="s1_one_snow">
+                    <img src="img/index/icon_leaf.svg" alt="" class="s1_leaf">
+                    <img src="img/index/pc_logotype.png" alt="" class="s1_logotype">
+                    <img src="img/index/snowman_hand.svg" class="s1_snowman_hand" alt="">
+                    <img src="img/index/snowman_hand_2.svg" class="s1_snowman_hand_2" alt="">
+                    <img src="img/index/snowman.svg" alt="" class="s1_snowman">
+                    <img src="img/index/tree.svg" alt="" class="s1_tree">
+                    <img src="img/index/logo.svg" alt="" class="s1_logo">
+                    <img src="img/index/tree_deco_1.svg" alt="" class="s1_1_deco">
+                    <img src="img/index/tree_deco_2.svg" alt="" class="s1_1_h_deco">
+                    <img src="img/index/tree_deco_1.svg" alt="" class="s1_2_deco">
+                    <img src="img/index/tree_deco_2.svg" alt="" class="s1_2_h_deco">
+                    <img src="img/index/tree_deco_1.svg" alt="" class="s1_3_deco">
+                    <img src="img/index/tree_deco_2.svg" alt="" class="s1_3_h_deco">
+                    <img src="img/index/deco_heart.svg" alt="" class="s1_deco_heart">
+                    <img src="img/index/icon_arrow.svg" alt="" class="s1_click">
+                </div>
+            </section>
+            <img src="img/index/snow.png" alt="" class="s1_outer_snow">
+            <img src="img/index/block.svg" alt="" class="s1_block">
+        </div>
+    </div>
+    <div class="line">12312</div>
+    <div id="s2_bg" class="postion  section">
+        <div class="s2_section">
+            <section id="contentfield_2" class="w600">
+                <div class="s2">
+                    <h5 class="custom_name"><span class="txt-bold h5" style="color:#EA0137;">Dear</span><span class="h4 txt-bold">王沈佳宜</span><span class="h5">小姐</span></h5>
+                    <div class="title"><img src="img/VIP/icon_leaf_1.svg" alt=""><b class="h3" style="color:#EA0137;">聖誕節快樂</b><img src="img/VIP/icon_leaf_2.svg" alt=""></div>
+                    <p class="sales_name">國泰人壽 <span class="txt-bold">王大明</span> 敬上</p>
+                    <div class="box">
+                        <img src="img/VIP/banner.svg" alt="" class="banner">
+                        <div class="a_btn"> <a href="#" class="h5"><img src="img/VIP/icon_heart.svg" alt="">勇敢送愛</a></div>
+                        <h5>暖心豐富好禮，送給您與家人!</h5>
+                        <p style="color:#EA0137">※ 謹獻給國泰一家人</p>
+                        <div class="a_btn"><a href="#" class="h5"><img src="img/VIP/icon_heart.svg" alt="">勇敢傳愛</a></div>
+                        <div class="explain">
+                            <h5>攜手VIP表揚公益抽好禮!</h5>
+                            <h5>FB濾鏡傳愛無界限~</h5>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">
+                        <h5>了解活動GO</h5>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+<script>
+    $("body").on("click", ".s1_click", function(e) {
+        e.preventDefault();
+        var target = $(".s2_section");
+        var targetPos = $(target).offset().top;
+        $('html, body').animate({
+            scrollTop: targetPos + 0
+        }, 800);
+    });
+    $(window).scroll(function() {
+        // console.log("ok")
+        var part1 = $("#s1_bg").offset().top;
+        var part2 = $("#s2_bg").offset().top;
+        var line = $(".line").offset().top;
+        var windowscroll = $(window).scrollTop();
+
+        console.log("windowscroll " + windowscroll)
+        console.log("part1 " + part1)
+        console.log("part2 " + part2)
+        console.log("line " + line)
+        // console.log("windowscroll" + windowscroll)
+
+        if (windowscroll > line && windowscroll < part2) {
+            $('html,body').animate({
+                scrollTop: part2
+            }, 200);
+        }
+        // else if (windowscroll < line) {
+        //     $('html,body').animate({
+        //         scrollTop: part1
+        //     },200);
+        // }
+    });
+
+        $(function () {
+            ShowHeadAni();
+    })
+    function ShowHeadAni() {
+        if ($(window).width() > 1023) {
+            $('.s1_ball').addClass('active');
+            $('.s1_leaf').addClass('active');
+            $('.s1_logo').addClass('active');
+            $('.s1_one_snow').addClass('active');
+            $('.s1_logotype').addClass('active');
+            $('.s1_snowman_hand').addClass('active');
+            $('.s1_snowman_hand_2').addClass('active');
+            $('.s1_1_deco').addClass('active');
+            $('.s1_2_deco').addClass('active');
+            $('.s1_3_deco').addClass('active');
+            $('.s1_1_h_deco').addClass('active');
+            $('.s1_2_h_deco').addClass('active');
+            $('.s1_3_h_deco').addClass('active');
+            $('.s1_click').addClass('active');
+            $('.s1_outer_snow').addClass('active');
+
+        } else {
+            $('.s1_logo').addClass('active');
+            $('.s1_one_snow').addClass('active');
+            $('.s1_ball').addClass('active');
+            $('.s1_leaf').addClass('active');
+            $('.s1_logotype').addClass('active');
+            $('.s1_snowman_hand').addClass('active');
+            $('.s1_snowman_hand_2').addClass('active');
+            $('.s1_1_deco').addClass('active');
+            $('.s1_2_deco').addClass('active');
+            $('.s1_3_deco').addClass('active');
+            $('.s1_1_h_deco').addClass('active');
+            $('.s1_2_h_deco').addClass('active');
+            $('.s1_3_h_deco').addClass('active');
+            $('.s1_click').addClass('active');
+            $('.s1_outer_snow').addClass('active');
+        }
+    }
+    //Anime
+    $(window).scroll(function () {
+            InitialAnime();
+    });
+
+    function OnScrollElement(_obj, ..._group) {
+        var windowScrollTop = $(window).scrollTop();
+        var windowheight = $(window).height();
+        var IsActive = (windowScrollTop + windowheight / 1.5) - $(_obj).offset().top > 0;
+        if (IsActive) {
+            $(_obj).addClass('active');
+            _group.forEach(element => {
+            $(element).addClass('active');
+            });
+        }
+    }
+    function InitialAnime() {
+        if ($(window).width() > 1023) {
+            OnScrollElement($('.s1_ball'));
+            OnScrollElement($('.s1_click'));
+            OnScrollElement($('.s1_one_snow'));
+            OnScrollElement($('.s1_leaf'));
+            OnScrollElement($('.s1_logo'));
+            OnScrollElement($('.s1_logotype'));
+            OnScrollElement($('.s1_snowman_hand'));
+            OnScrollElement($('.s1_snowman_hand_2'));
+            OnScrollElement($('.s1_1_deco'));
+            OnScrollElement($('.s1_2_deco'));
+            OnScrollElement($('.s1_3_deco'));
+            OnScrollElement($('.s1_1_h_deco'));
+            OnScrollElement($('.s1_2_h_deco'));
+            OnScrollElement($('.s1_outer_snow'));
+        } else {
+            OnScrollElement($('.s1_ball'));
+            OnScrollElement($('.s1_click'));
+            OnScrollElement($('.s1_one_snow'));
+            OnScrollElement($('.s1_leaf'));
+            OnScrollElement($('.s1_logotype'));
+            OnScrollElement($('.s1_snowman_hand'));
+            OnScrollElement($('.s1_snowman_hand_2'));
+            OnScrollElement($('.s1_1_deco'));
+            OnScrollElement($('.s1_2_deco'));
+            OnScrollElement($('.s1_3_deco'));
+            OnScrollElement($('.s1_1_h_deco'));
+            OnScrollElement($('.s1_2_h_deco'));
+            OnScrollElement($('.s1_3_h_deco'));
+            OnScrollElement($('.s1_outer_snow'));
+        }
+    }
+
+</script>
+
+</html>
